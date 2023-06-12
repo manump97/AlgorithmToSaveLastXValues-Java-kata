@@ -11,15 +11,15 @@ Orden 1
 Orden N
 
 Instructions:
-print - Return/Print the last value saved
-ctrlZ - delete the last value and be able to recover the last one
-block - Convert the last value in untouchable until unblock instruction
-unblock - Convert the last value in touchable
+TODO I1. print - Return/Print the last value saved
+TODO I2. ctrlZ - delete the last value and be able to recover the last one
+TODO I3. block - Convert the last value in untouchable until unblock instruction
+TODO I4. unblock - Convert the last value in touchable
 
 Message error:
-* Value that is not available
-* Element is blocked
-* Save a value without space
+TODO E1.Value that is not available
+TODO E2.Element is blocked
+TODO E3.Save a value without space
 */
 
 public class Main {
