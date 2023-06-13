@@ -24,6 +24,8 @@ TODO E3.Save a value without space
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        AlgorithmDataManagement dataManager = new AlgorithmDataManagement("database.txt");
+        dataManager.readData();
+        dataManager.printLastValue();
     }
 }
