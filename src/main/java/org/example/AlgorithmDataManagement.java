@@ -51,7 +51,7 @@ public class AlgorithmDataManagement {
     }
     public boolean isLastValueBlocked(){
         System.out.println(this.lastValueIsBlocked);
-        return this.lastValueIsBlocked;
+        return this.lastValueIsBlocked;/
     }
     public void blockLastValue(){
         this.lastValueIsBlocked = true;
