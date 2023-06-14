@@ -11,10 +11,11 @@ public class AlgorithmDataManagement {
     // INITIALIZATION
     private List<String> data=new ArrayList<String>();
     private boolean lastValueIsBlocked = false;
-    private int clipboardValue = 0;
+    private String clipboardValue = "0";
     private String pathData = "";
     private String pathInit = "C:\\Users\\SNX8073\\OneDrive - Nissan Motor Corporation\\MMP\\Computing Skills" +
             "\\07. JAVA\\AlgorithmToSaveLastXValues-kata\\src\\main\\java\\org\\example";
+    private int dataSize = 0;
 
     // CONSTRUCTORS
     public AlgorithmDataManagement() {
@@ -35,6 +36,7 @@ public class AlgorithmDataManagement {
                 //System.out.println(value);
                 this.data.add(value);
             }
+            this.dataSize = this.data.size();
             myReader.close();
             System.out.println(this.data);
         } catch (FileNotFoundException e) {
@@ -43,11 +45,16 @@ public class AlgorithmDataManagement {
         }
     }
     public void printLastValue(){
-        String lastValue = this.data.get(this.data.size()-1);
+        String lastValue = this.data.get(this.dataSize-1);
         System.out.println(lastValue);
     }
+    public void changeLastValue(String num){
+        this.clipboardValue = this.data.get(this.dataSize-1);
+        this.data.add(this.dataSize-1,num);
+    }
     public void ctrlZ(){
-
+        this.clipboardValue = this.data.get(this.dataSize-1);
+        this.data.add(this.dataSize-1,this.clipboardValue);
     }
     public boolean isLastValueBlocked(){
         System.out.println(this.lastValueIsBlocked);
