@@ -11,23 +11,24 @@ import java.util.Scanner; // Import the Scanner class to read text files // Repi
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlgorithmDataManagement {
+public class DataStorer {
     // INITIALIZATION
     private List<String> data=new ArrayList<String>();
     private boolean lastValueIsBlocked = false;
     private String clipboardValue = "0";
     private String pathData = "";
-    private String pathInit = "C:\\Users\\SNX8073\\OneDrive - Nissan Motor Corporation\\MMP\\Computing Skills" +
-            "\\07. JAVA\\AlgorithmToSaveLastXValues-kata\\src\\main\\java\\org\\example";
+    private String pathInit = System.getProperty("user.dir");
     // Ya hemos hablado de que quizas lo del txt no es lo mas adecuado, pero nunca, nunca nunca hardcodees la configuracion
+    // DONE - Get user path directamente desde el sitio en el que se ejecuta el main.
     private int dataSize = 0;
 
     // CONSTRUCTORS
-    public AlgorithmDataManagement() {
-        new AlgorithmDataManagement(this.pathData);
+    public DataStorer() {
+        new DataStorer(this.pathData);
     }
-    public AlgorithmDataManagement(String userPathData) { //No creo que en ningun caso una clase deba llamarse Algorithm. Quizas el objeto seria...
+    public DataStorer(String userPathData) { //No creo que en ningun caso una clase deba llamarse Algorithm. Quizas el objeto seria...
         //DataStorer DataBuffer Clipboard
+        // DONE - DataStorer mejor nombre
         this.data = data;
         this.lastValueIsBlocked = lastValueIsBlocked;
         this.clipboardValue = clipboardValue;
